@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    
+    <title>The World is Calling</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/syntax.css">
+
+
+    <!-- Atom Feed -->
+    <link href="/feed.atom"
+      rel="alternate"
+      title="Recent Changes"
+      type="application/atom+xml">
+</head>
+<body>
+
+
+    <!-- Header -->
+
+    <div id="header">
+        <h1>The World is Calling</h1>
+        
+        <h3 id="date">26-03-2013</h3>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+        <h1>The world is callin</h1>
+<h3>aaaakkkkkk</h3>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">feed</span><span class="p">():</span>
+    <span class="n">feed</span> <span class="o">=</span> <span class="n">AtomFeed</span><span class="p">(</span><span class="s">&#39;Recent Articles&#39;</span><span class="p">,</span>
+                    <span class="n">feed_url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+                    <span class="n">url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url_root</span><span class="p">)</span>
+    <span class="n">posts</span> <span class="o">=</span> <span class="n">blog</span><span class="o">.</span><span class="n">posts</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">subtitle</span><span class="p">)</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s">&#39;subtitle&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="n">p</span><span class="o">.</span><span class="n">title</span>
+    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
+        <span class="n">feed</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">title</span><span class="p">(</span><span class="n">post</span><span class="p">),</span>
+            <span class="nb">unicode</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">html</span><span class="p">),</span>
+            <span class="n">content_type</span><span class="o">=</span><span class="s">&#39;html&#39;</span><span class="p">,</span>
+            <span class="n">author</span><span class="o">=</span><span class="s">&#39;ovidiucs&#39;</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="n">_external</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+            <span class="n">updated</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="p">),</span>
+            <span class="n">published</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">feed</span><span class="o">.</span><span class="n">get_response</span><span class="p">()</span>
+</pre></div>
+    </div>
+
+
+
+</body>
+</html>
