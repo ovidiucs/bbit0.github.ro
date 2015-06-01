@@ -1,23 +1,29 @@
-<html>
-
-<head>
-    
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+  <head>
     <title>The World is Calling</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/syntax.css">
 
+  </head>
+  <body>
+    
+<div class="row">
+        <div class="large-12 columns">
+          <div class="nav-bar right">
+           <ul class="button-group">
+             <li><a href="#" class="button">Home</a></li>
+             <li><a href="#" class="button">Contact</a></li>
+             <li><a href="#" class="button">Stuff</a></li>
+             <li><a href="#" class="button">Google</a></li>
+            </ul>
+          </div>
+          <h1 >bit0.ro <small>bits and stuff</small></h1>
+          <hr/>
+        </div>
+      </div>
 
-    <!-- Atom Feed -->
-    <link href="/feed.atom"
-      rel="alternate"
-      title="Recent Changes"
-      type="application/atom+xml">
-</head>
-<body>
-
-
+    
     <!-- Header -->
 
     <div id="header">
@@ -30,25 +36,64 @@
     <div id="content">
         <h1>The world is callin</h1>
 <h3>aaaakkkkkk</h3>
-<div class="codehilite"><pre><span class="k">def</span> <span class="nf">feed</span><span class="p">():</span>
-    <span class="n">feed</span> <span class="o">=</span> <span class="n">AtomFeed</span><span class="p">(</span><span class="s">&#39;Recent Articles&#39;</span><span class="p">,</span>
-                    <span class="n">feed_url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
-                    <span class="n">url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url_root</span><span class="p">)</span>
-    <span class="n">posts</span> <span class="o">=</span> <span class="n">blog</span><span class="o">.</span><span class="n">posts</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">subtitle</span><span class="p">)</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s">&#39;subtitle&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="n">p</span><span class="o">.</span><span class="n">title</span>
-    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
-        <span class="n">feed</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">title</span><span class="p">(</span><span class="n">post</span><span class="p">),</span>
-            <span class="nb">unicode</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">html</span><span class="p">),</span>
-            <span class="n">content_type</span><span class="o">=</span><span class="s">&#39;html&#39;</span><span class="p">,</span>
-            <span class="n">author</span><span class="o">=</span><span class="s">&#39;ovidiucs&#39;</span><span class="p">,</span>
-            <span class="n">url</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="n">_external</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
-            <span class="n">updated</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="p">),</span>
-            <span class="n">published</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">feed</span><span class="o">.</span><span class="n">get_response</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-python">def feed():
+    feed = AtomFeed('Recent Articles',
+                    feed_url=request.url,
+                    url=request.url_root)
+    posts = blog.posts[:10]
+    title = lambda p: '%s: %s' % (p.title, p.subtitle) if hasattr(p, 'subtitle') else p.title
+    for post in posts:
+        feed.add(title(post),
+            unicode(post.html),
+            content_type='html',
+            author='ovidiucs',
+            url=post.url(_external=True),
+            updated=datetime.datetime(post.date.year, post.date.month, post.date.day),
+            published=datetime.datetime(post.date.year, post.date.month, post.date.day))
+    return feed.get_response()</code></pre>
     </div>
 
 
+   
+      
 
-</body>
+
+
+      <footer class="row">
+        <div class="large-12 columns">
+          <hr/>
+          <div class="row">
+            <div class="large-6 columns">
+              <p>© 2015</p>
+            </div>
+            <div class="large-6 columns">
+              <ul class="inline-list right">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+      
+        
+
+          <script src="/static/foundation/js/vendor/jquery.js"></script>
+          <script src="/static/foundation/js/vendor/jquery.cookie.js"></script>        
+          <script src="/static/foundation/js/vendor/placeholder.js"></script>
+          <script src="/static/foundation/js/vendor/fastclick.js"></script>
+        
+        
+          <script src="/static/foundation/js/foundation.min.js"></script>
+        
+
+        <script>
+          $(document).foundation();
+        </script>
+  </body>
 </html>
