@@ -2,7 +2,7 @@
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" dir="ltr">
   <head>
-            
+    
         
     <title></title>
     <meta charset="utf-8">
@@ -24,6 +24,7 @@
     
 
     <title>The World is Calling</title>
+    <link rel="stylesheet" href="/static/css/syntax.css">
 
 
   </head>
@@ -53,48 +54,48 @@
                 <h6>Written by <a href="#">John Smith</a> on 26-03-2013.</h6>
                 <div class="row">
                     <div class="large-10 columns">
-                       <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue facilisis mi, id auctor erat porttitor pulvinar. Nam dignissim bibendum nisi id luctus. Proin enim tellus, auctor eget mollis sit amet, iaculis et velit. Fusce eget orci eu ligula suscipit lacinia. Mauris pharetra dolor ut imperdiet vulputate. Nunc hendrerit pretium nibh, et dignissim magna fermentum eu. Curabitur pharetra, nulla sit amet semper lacinia, odio augue tempor metus, sed posuere purus ante vitae ligula. Sed lacinia laoreet velit.</p>
+                        <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue facilisis mi, id auctor erat porttitor pulvinar. Nam dignissim bibendum nisi id luctus. Proin enim tellus, auctor eget mollis sit amet, iaculis et velit. Fusce eget orci eu ligula suscipit lacinia. Mauris pharetra dolor ut imperdiet vulputate. Nunc hendrerit pretium nibh, et dignissim magna fermentum eu. Curabitur pharetra, nulla sit amet semper lacinia, odio augue tempor metus, sed posuere purus ante vitae ligula. Sed lacinia laoreet velit.</p>
 <p>Suspendisse ut ipsum metus. Suspendisse mollis ligula vehicula ex mollis, ac tincidunt augue elementum. Sed aliquam sit amet turpis ut iaculis. Vestibulum feugiat sem est, sed maximus nunc pellentesque sit amet. Duis volutpat porta lorem, non auctor libero vestibulum ac. Etiam pulvinar varius facilisis. Etiam at enim malesuada, tristique justo ut, fringilla libero.</p>
 <p>Morbi ultrices purus vel ipsum accumsan ultrices. Donec quis cursus erat. Fusce in venenatis purus. In hac habitasse platea dictumst. Duis diam urna, ultrices et pellentesque eget, eleifend sit amet sem. Proin eu commodo nulla, nec fringilla dui. Nunc rutrum consequat tortor vel semper. Aliquam erat volutpat. Sed sagittis nulla libero, ut fringilla tortor molestie id. Praesent turpis magna, malesuada quis libero nec, scelerisque facilisis justo. Donec rutrum tellus vitae consequat lobortis. Proin et blandit enim. Curabitur nec semper augue. Nunc vel mattis felis.</p>
 <p>Vestibulum ut erat libero. Duis tempus a sem a tincidunt. Curabitur sagittis eu justo vel lacinia. In hendrerit sagittis nunc, nec tincidunt mi condimentum eu. Curabitur convallis sapien at lorem suscipit, sodales venenatis lectus porttitor. Sed at fermentum tortor. Phasellus egestas leo sem, nec hendrerit tellus porttitor id. Pellentesque pellentesque augue sem, a tincidunt tortor semper sed. Vestibulum a nisi a velit semper blandit sodales vel leo. Phasellus vulputate at nibh vitae pretium. Nullam eget ultrices urna, lobortis eleifend leo. Vestibulum accumsan magna id nibh tempor luctus. Curabitur sit amet nisl eu odio rutrum faucibus at scelerisque enim.</p>
 <p>Nulla facilisi. Nullam scelerisque diam urna, in condimentum nulla pretium eget. Quisque sed laoreet enim, ut rhoncus nisl. Aliquam mattis eros et augue facilisis, vitae tincidunt libero pellentesque. Ut vulputate felis ligula, in interdum magna tincidunt non. Mauris consectetur ut enim sed tincidunt. Maecenas condimentum interdum lacinia. Mauris eu nisi ac tellus dictum fermentum. Duis et quam lacinia, luctus dui nec, auctor ipsum. In nec libero eu nunc viverra ullamcorper. Maecenas vel ornare urna. Ut nec rhoncus lectus, sit amet pharetra ipsum. Aenean semper fermentum feugiat. Ut efficitur dui id eros varius tincidunt. Etiam eget augue lorem.</p>
-<pre class="codehilite"><code class="language-python">def feed():
-    feed = AtomFeed('Recent Articles',
-                    feed_url=request.url,
-                    url=request.url_root)
-    posts = blog.posts[:10]
-    title = lambda p: '%s: %s' % (p.title, p.subtitle) if hasattr(p, 'subtitle') else p.title
-    for post in posts:
-        feed.add(title(post),
-            unicode(post.html),
-            content_type='html',
-            author='ovidiucs',
-            url=post.url(_external=True),
-            updated=datetime.datetime(post.date.year, post.date.month, post.date.day),
-            published=datetime.datetime(post.date.year, post.date.month, post.date.day))
-    return feed.get_response()</code></pre></p>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">feed</span><span class="p">():</span>
+    <span class="n">feed</span> <span class="o">=</span> <span class="n">AtomFeed</span><span class="p">(</span><span class="s">&#39;Recent Articles&#39;</span><span class="p">,</span>
+                    <span class="n">feed_url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+                    <span class="n">url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url_root</span><span class="p">)</span>
+    <span class="n">posts</span> <span class="o">=</span> <span class="n">blog</span><span class="o">.</span><span class="n">posts</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">subtitle</span><span class="p">)</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s">&#39;subtitle&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="n">p</span><span class="o">.</span><span class="n">title</span>
+    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
+        <span class="n">feed</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">title</span><span class="p">(</span><span class="n">post</span><span class="p">),</span>
+            <span class="nb">unicode</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">html</span><span class="p">),</span>
+            <span class="n">content_type</span><span class="o">=</span><span class="s">&#39;html&#39;</span><span class="p">,</span>
+            <span class="n">author</span><span class="o">=</span><span class="s">&#39;ovidiucs&#39;</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="n">_external</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+            <span class="n">updated</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="p">),</span>
+            <span class="n">published</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">feed</span><span class="o">.</span><span class="n">get_response</span><span class="p">()</span>
+</pre></div></p>
                     </div>
                 </div>
             </article>
         </div>
-
         <aside class="large-3 columns">
-        <div class="panel">
-          <h5>Categories</h5>
-          <ul class="side-nav">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Fun</a></li>
-            <li><a href="#">Weasels</a></li>
-          </ul>
-        </div>
-
-          <div class="panel">
-            <h5>Featured</h5>
-            <p>Suspendisse ut ipsum metus. Suspendisse mollis ligula vehicula ex mollis, ac tincidunt augue elementum. Sed aliquam sit amet turpis ut iaculis.</p>
-            <a href="#">Read More →</a>
-          </div>
+            <div class="panel">
+                <h5>Categories</h5>
+                <ul class="side-nav">
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Fun</a></li>
+                    <li><a href="#">Weasels</a></li>
+                </ul>
+            </div>
+            <div class="panel">
+                <h5>Featured</h5>
+                <p>Suspendisse ut ipsum metus. Suspendisse mollis ligula vehicula ex mollis, ac tincidunt augue
+                    elementum. Sed aliquam sit amet turpis ut iaculis.</p>
+                <a href="#">Read More →</a>
+            </div>
         </aside>
     </div>
 
