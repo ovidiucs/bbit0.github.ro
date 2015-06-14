@@ -23,8 +23,8 @@
       
     
 
-    <link rel="stylesheet" href="/static/css/syntax.css">
-    <title>The World is Calling</title>
+    <title>VLAN-uri</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/syntax.css">
 
 
   </head>
@@ -46,57 +46,111 @@
       </div>
 
     
+    <!-- Header -->
     <div class="row">
-        <div class="medium-9 columns" role="article">
-            <article>
-                <h3><a href="#">The World is Calling</a></h3>
-                
-                <h6>Written by <a href="#">John Smith</a> on 26-03-2013.</h6>
-                <div class="row">
-                    <div class="large-10 columns">
-                        <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue facilisis mi, id auctor erat porttitor pulvinar. Nam dignissim bibendum nisi id luctus. Proin enim tellus, auctor eget mollis sit amet, iaculis et velit. Fusce eget orci eu ligula suscipit lacinia. Mauris pharetra dolor ut imperdiet vulputate. Nunc hendrerit pretium nibh, et dignissim magna fermentum eu. Curabitur pharetra, nulla sit amet semper lacinia, odio augue tempor metus, sed posuere purus ante vitae ligula. Sed lacinia laoreet velit.</p>
-<p>Suspendisse ut ipsum metus. Suspendisse mollis ligula vehicula ex mollis, ac tincidunt augue elementum. Sed aliquam sit amet turpis ut iaculis. Vestibulum feugiat sem est, sed maximus nunc pellentesque sit amet. Duis volutpat porta lorem, non auctor libero vestibulum ac. Etiam pulvinar varius facilisis. Etiam at enim malesuada, tristique justo ut, fringilla libero.</p>
-<p>Morbi ultrices purus vel ipsum accumsan ultrices. Donec quis cursus erat. Fusce in venenatis purus. In hac habitasse platea dictumst. Duis diam urna, ultrices et pellentesque eget, eleifend sit amet sem. Proin eu commodo nulla, nec fringilla dui. Nunc rutrum consequat tortor vel semper. Aliquam erat volutpat. Sed sagittis nulla libero, ut fringilla tortor molestie id. Praesent turpis magna, malesuada quis libero nec, scelerisque facilisis justo. Donec rutrum tellus vitae consequat lobortis. Proin et blandit enim. Curabitur nec semper augue. Nunc vel mattis felis.</p>
-<p>Vestibulum ut erat libero. Duis tempus a sem a tincidunt. Curabitur sagittis eu justo vel lacinia. In hendrerit sagittis nunc, nec tincidunt mi condimentum eu. Curabitur convallis sapien at lorem suscipit, sodales venenatis lectus porttitor. Sed at fermentum tortor. Phasellus egestas leo sem, nec hendrerit tellus porttitor id. Pellentesque pellentesque augue sem, a tincidunt tortor semper sed. Vestibulum a nisi a velit semper blandit sodales vel leo. Phasellus vulputate at nibh vitae pretium. Nullam eget ultrices urna, lobortis eleifend leo. Vestibulum accumsan magna id nibh tempor luctus. Curabitur sit amet nisl eu odio rutrum faucibus at scelerisque enim.</p>
-<p>Nulla facilisi. Nullam scelerisque diam urna, in condimentum nulla pretium eget. Quisque sed laoreet enim, ut rhoncus nisl. Aliquam mattis eros et augue facilisis, vitae tincidunt libero pellentesque. Ut vulputate felis ligula, in interdum magna tincidunt non. Mauris consectetur ut enim sed tincidunt. Maecenas condimentum interdum lacinia. Mauris eu nisi ac tellus dictum fermentum. Duis et quam lacinia, luctus dui nec, auctor ipsum. In nec libero eu nunc viverra ullamcorper. Maecenas vel ornare urna. Ut nec rhoncus lectus, sit amet pharetra ipsum. Aenean semper fermentum feugiat. Ut efficitur dui id eros varius tincidunt. Etiam eget augue lorem.</p>
-<div class="codehilite"><pre><span class="k">def</span> <span class="nf">feed</span><span class="p">():</span>
-    <span class="n">feed</span> <span class="o">=</span> <span class="n">AtomFeed</span><span class="p">(</span><span class="s">&#39;Recent Articles&#39;</span><span class="p">,</span>
-                    <span class="n">feed_url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
-                    <span class="n">url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url_root</span><span class="p">)</span>
-    <span class="n">posts</span> <span class="o">=</span> <span class="n">blog</span><span class="o">.</span><span class="n">posts</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">subtitle</span><span class="p">)</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s">&#39;subtitle&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="n">p</span><span class="o">.</span><span class="n">title</span>
-    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
-        <span class="n">feed</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">title</span><span class="p">(</span><span class="n">post</span><span class="p">),</span>
-            <span class="nb">unicode</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">html</span><span class="p">),</span>
-            <span class="n">content_type</span><span class="o">=</span><span class="s">&#39;html&#39;</span><span class="p">,</span>
-            <span class="n">author</span><span class="o">=</span><span class="s">&#39;ovidiucs&#39;</span><span class="p">,</span>
-            <span class="n">url</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="n">_external</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
-            <span class="n">updated</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="p">),</span>
-            <span class="n">published</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">feed</span><span class="o">.</span><span class="n">get_response</span><span class="p">()</span>
-</pre></div></p>
-                    </div>
-                </div>
-            </article>
+        <div id="header" class="medium-12 columns">
+            <h1>VLAN-uri</h1>
+            
+            <h3 id="date">15-06-2015</h3>
+            <!-- Content -->
+            <div id="content">
+                <p>Ar fi doua optiuni.</p>
+<ul>
+<li>SVI pe switch</li>
+<li>SVI pe linux.</li>
+</ul>
+<p>Unul din sisteme va fi desktop cu functie de router.</p>
+<p>Activarea <code>ip.forwarding</code> care by default ar fi dezactivat pe sisteme Linux folosite ca desktops.
+In cazul meu, Arch are profile de conectare via <code>netctl</code> si regasim multe exemple in <code>/etc/netctl/examples</code>.
+De acolo copiem ce ne interseaza (<code>ethernet-static</code>, <code>vlan-static</code>).</p>
+<p>Sintaxa este foarte stricta si orice greseala duce la neridicarea interfetei, fara mesaj de eroare.
+Pe langa asta, documentatia cam lasa de dorit exemplu: dupa ridicarea interfetei vreau sa am doua rute, nu doar una, unde
+merge cu IPCustom nu cu Routes
+Exemplu de fisier de config pentru vlan 21:</p>
+<div class="codehilite"><pre>    Description=&#39;Virtual LAN 25 on interface enp4s2&#39;
+    Interface=enp4s2.25
+    Connection=vlan
+    SkipNoCarrier=yes
+    # The variable name is plural, but needs precisely one interface
+    BindsToInterfaces=enp4s2
+    VLANID=25
+    IP=static
+    Address=&quot;10.25.0.10/24&quot;
+</pre></div>
+
+
+<p>Dupa activare la boot pot fi pornite.</p>
+<p>Actualizarea <code>iptables</code> cu o regula la POSTROUTING in tabla NAT si asigurarea ca chain-ul de forwarding nu are politica de drop sau daca are atunci sa se adauge exceptie</p>
+<p>Acum am 3 vlan-uri:</p>
+<ul>
+<li>34  Management 10.34.0.1/29</li>
+<li>25  Raspberry 10.25.0.1/29</li>
+<li>86  Sistem 10.86.0.1/29</li>
+</ul>
+<p>Initial am creat interfete vlan pe sisteme si comunicau daca tineam porturile in trunk.
+Sisteme care sunt in trunk sunt interesante pentru ca ar permite folosirea de vlan-uri pentru separerea serviciilor de pe acelasi sistem. Am 2 servere pe raspberry.
+Postgres si Nginx. Le putem da de pe interfete tagate si am putea discrimina mai bine traficul pe switch. Ramane de incercat.</p>
+<p>As fi vrut si un subnet separat pentru fiecare si un subnet in plus pentru Management-ul prin SSH.</p>
+<p>Pe switch am doua host-uri conectate dar as vrea un svi penru management. Sa ridic un SVI pentru interfete care nu sunt UP nu merge. Pe loopback nu pot aplica un SVI si vlan state active nu merge ca SVI-ul tot are nevoie de o interfata pe care sa fie traffic. Nu a mers nici cu no keepalive pe o interfata fast.</p>
+<p>Asa ca raman cu optiunea de a folosi loopback care e mereu up si pot accesa echipamentul cat timp am ruta la el.</p>
+<p>Pana la urma am lasat interfata spre sistem trunk si am pus vlan 86 ca nativ. Am vrut  o interfata netagata spre switch.
+        !
+        interface FastEthernet0/24
+        switchport trunk encapsulation dot1q
+        switchport trunk native vlan 86
+        switchport trunk allowed vlan 25,34
+        switchport mode trunk
+        !</p>
+<p>Profiul <code>netctl</code> pentru interfata spre swtich. Foarte important e <code>SkipNoCarrier</code> care nu va ridica o interfata
+care nu are link si ulterior, va avea unul.</p>
+<div class="codehilite"><pre>    cat /etc/netctl/enp4s2
+    Description=&#39;enp4s2-access 86&#39;
+    Interface=enp4s2
+    Connection=ethernet
+    SkipNoCarrier=yes
+    IP=static
+    AutoWired=yes
+    Address=(&#39;10.86.0.2/29&#39;)
+    IPCustom=(&#39;route add 10.25.0.0/29 via 10.86.0.1&#39; &#39;route add 10.34.0.0/29 via 10.86.0.1&#39;)
+</pre></div>
+
+
+<p><code>ifconfig</code> va arata interfata dupa <code>netctl start</code></p>
+<p>Pe interfata de pe raspberry. Traficul pleaca la fel. Untagged.</p>
+<div class="codehilite"><pre>    [root@pytest netctl]# cat eth0
+    Description=&#39;eth0&#39;
+    Interface=eth0
+    Connection=ethernet
+    AutoWired=yes
+    SkipNoCarrier=yes
+    IP=static
+    Address=(&#39;10.25.0.2/29&#39;)
+    Gateway=(&#39;10.25.0.1&#39;)
+    DNS=(&#39;8.8.8.8 8.8.4.4&#39;)
+</pre></div>
+
+
+<p>Si pe swtich</p>
+<div class="codehilite"><pre>    !
+    interface Vlan25
+    description Raspberry
+    ip address 10.25.0.1 255.255.255.248
+    !
+    !
+    interface FastEthernet0/12
+    switchport access vlan 25
+    switchport mode access
+    !
+    Cu o ruta statica spre sistemul cu netul
+    !
+    interface Vlan30
+    description Calculator
+    ip address 10.86.0.1 255.255.255.248
+    !
+    ip route 0.0.0.0 0.0.0.0 10.86.0.2
+</pre></div>
+            </div>
         </div>
-        <aside class="medium-3 columns">
-            <div class="panel">
-                <h5>Categories</h5>
-                <ul class="side-nav">
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Code</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Fun</a></li>
-                    <li><a href="#">Weasels</a></li>
-                </ul>
-            </div>
-            <div class="panel">
-                <h5>Featured</h5>
-                <p>Suspendisse ut ipsum metus. Suspendisse mollis ligula vehicula ex mollis, ac tincidunt augue
-                    elementum. Sed aliquam sit amet turpis ut iaculis.</p>
-                <a href="#">Read More →</a>
-            </div>
-        </aside>
     </div>
 
    

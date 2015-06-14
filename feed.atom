@@ -2,39 +2,132 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Recent Articles</title>
   <id>http://ovidiucs.github.io/feed.atom</id>
-  <updated>2013-03-26T00:00:00Z</updated>
+  <updated>2015-06-15T00:00:00Z</updated>
   <link href="http://ovidiucs.github.io/" />
   <link href="http://ovidiucs.github.io/feed.atom" rel="self" />
   <generator>Werkzeug</generator>
   <entry xml:base="http://ovidiucs.github.io/feed.atom">
-    <title type="text">The World is Calling</title>
+    <title type="text">VLAN-uri</title>
     <id>http://ovidiucs.github.io/blog/world/</id>
-    <updated>2013-03-26T00:00:00Z</updated>
-    <published>2013-03-26T00:00:00Z</published>
+    <updated>2015-06-15T00:00:00Z</updated>
+    <published>2015-06-15T00:00:00Z</published>
     <link href="http://ovidiucs.github.io/blog/world/" />
     <author>
       <name>ovidiucs</name>
     </author>
-    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue facilisis mi, id auctor erat porttitor pulvinar. Nam dignissim bibendum nisi id luctus. Proin enim tellus, auctor eget mollis sit amet, iaculis et velit. Fusce eget orci eu ligula suscipit lacinia. Mauris pharetra dolor ut imperdiet vulputate. Nunc hendrerit pretium nibh, et dignissim magna fermentum eu. Curabitur pharetra, nulla sit amet semper lacinia, odio augue tempor metus, sed posuere purus ante vitae ligula. Sed lacinia laoreet velit.&lt;/p&gt;
-&lt;p&gt;Suspendisse ut ipsum metus. Suspendisse mollis ligula vehicula ex mollis, ac tincidunt augue elementum. Sed aliquam sit amet turpis ut iaculis. Vestibulum feugiat sem est, sed maximus nunc pellentesque sit amet. Duis volutpat porta lorem, non auctor libero vestibulum ac. Etiam pulvinar varius facilisis. Etiam at enim malesuada, tristique justo ut, fringilla libero.&lt;/p&gt;
-&lt;p&gt;Morbi ultrices purus vel ipsum accumsan ultrices. Donec quis cursus erat. Fusce in venenatis purus. In hac habitasse platea dictumst. Duis diam urna, ultrices et pellentesque eget, eleifend sit amet sem. Proin eu commodo nulla, nec fringilla dui. Nunc rutrum consequat tortor vel semper. Aliquam erat volutpat. Sed sagittis nulla libero, ut fringilla tortor molestie id. Praesent turpis magna, malesuada quis libero nec, scelerisque facilisis justo. Donec rutrum tellus vitae consequat lobortis. Proin et blandit enim. Curabitur nec semper augue. Nunc vel mattis felis.&lt;/p&gt;
-&lt;p&gt;Vestibulum ut erat libero. Duis tempus a sem a tincidunt. Curabitur sagittis eu justo vel lacinia. In hendrerit sagittis nunc, nec tincidunt mi condimentum eu. Curabitur convallis sapien at lorem suscipit, sodales venenatis lectus porttitor. Sed at fermentum tortor. Phasellus egestas leo sem, nec hendrerit tellus porttitor id. Pellentesque pellentesque augue sem, a tincidunt tortor semper sed. Vestibulum a nisi a velit semper blandit sodales vel leo. Phasellus vulputate at nibh vitae pretium. Nullam eget ultrices urna, lobortis eleifend leo. Vestibulum accumsan magna id nibh tempor luctus. Curabitur sit amet nisl eu odio rutrum faucibus at scelerisque enim.&lt;/p&gt;
-&lt;p&gt;Nulla facilisi. Nullam scelerisque diam urna, in condimentum nulla pretium eget. Quisque sed laoreet enim, ut rhoncus nisl. Aliquam mattis eros et augue facilisis, vitae tincidunt libero pellentesque. Ut vulputate felis ligula, in interdum magna tincidunt non. Mauris consectetur ut enim sed tincidunt. Maecenas condimentum interdum lacinia. Mauris eu nisi ac tellus dictum fermentum. Duis et quam lacinia, luctus dui nec, auctor ipsum. In nec libero eu nunc viverra ullamcorper. Maecenas vel ornare urna. Ut nec rhoncus lectus, sit amet pharetra ipsum. Aenean semper fermentum feugiat. Ut efficitur dui id eros varius tincidunt. Etiam eget augue lorem.&lt;/p&gt;
-&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;feed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;feed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AtomFeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Recent Articles&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;feed_url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url_root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subtitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hasattr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;subtitle&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;feed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-            &lt;span class=&quot;nb&quot;&gt;unicode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;content_type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;ovidiucs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_external&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;updated&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;published&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;feed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    <content type="html">&lt;p&gt;Ar fi doua optiuni.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SVI pe switch&lt;/li&gt;
+&lt;li&gt;SVI pe linux.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Unul din sisteme va fi desktop cu functie de router.&lt;/p&gt;
+&lt;p&gt;Activarea &lt;code&gt;ip.forwarding&lt;/code&gt; care by default ar fi dezactivat pe sisteme Linux folosite ca desktops.
+In cazul meu, Arch are profile de conectare via &lt;code&gt;netctl&lt;/code&gt; si regasim multe exemple in &lt;code&gt;/etc/netctl/examples&lt;/code&gt;.
+De acolo copiem ce ne interseaza (&lt;code&gt;ethernet-static&lt;/code&gt;, &lt;code&gt;vlan-static&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Sintaxa este foarte stricta si orice greseala duce la neridicarea interfetei, fara mesaj de eroare.
+Pe langa asta, documentatia cam lasa de dorit exemplu: dupa ridicarea interfetei vreau sa am doua rute, nu doar una, unde
+merge cu IPCustom nu cu Routes
+Exemplu de fisier de config pentru vlan 21:&lt;/p&gt;
+&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;    Description=&amp;#39;Virtual LAN 25 on interface enp4s2&amp;#39;
+    Interface=enp4s2.25
+    Connection=vlan
+    SkipNoCarrier=yes
+    # The variable name is plural, but needs precisely one interface
+    BindsToInterfaces=enp4s2
+    VLANID=25
+    IP=static
+    Address=&amp;quot;10.25.0.10/24&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Dupa activare la boot pot fi pornite.&lt;/p&gt;
+&lt;p&gt;Actualizarea &lt;code&gt;iptables&lt;/code&gt; cu o regula la POSTROUTING in tabla NAT si asigurarea ca chain-ul de forwarding nu are politica de drop sau daca are atunci sa se adauge exceptie&lt;/p&gt;
+&lt;p&gt;Acum am 3 vlan-uri:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;34  Management 10.34.0.1/29&lt;/li&gt;
+&lt;li&gt;25  Raspberry 10.25.0.1/29&lt;/li&gt;
+&lt;li&gt;86  Sistem 10.86.0.1/29&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Initial am creat interfete vlan pe sisteme si comunicau daca tineam porturile in trunk.
+Sisteme care sunt in trunk sunt interesante pentru ca ar permite folosirea de vlan-uri pentru separerea serviciilor de pe acelasi sistem. Am 2 servere pe raspberry.
+Postgres si Nginx. Le putem da de pe interfete tagate si am putea discrimina mai bine traficul pe switch. Ramane de incercat.&lt;/p&gt;
+&lt;p&gt;As fi vrut si un subnet separat pentru fiecare si un subnet in plus pentru Management-ul prin SSH.&lt;/p&gt;
+&lt;p&gt;Pe switch am doua host-uri conectate dar as vrea un svi penru management. Sa ridic un SVI pentru interfete care nu sunt UP nu merge. Pe loopback nu pot aplica un SVI si vlan state active nu merge ca SVI-ul tot are nevoie de o interfata pe care sa fie traffic. Nu a mers nici cu no keepalive pe o interfata fast.&lt;/p&gt;
+&lt;p&gt;Asa ca raman cu optiunea de a folosi loopback care e mereu up si pot accesa echipamentul cat timp am ruta la el.&lt;/p&gt;
+&lt;p&gt;Pana la urma am lasat interfata spre sistem trunk si am pus vlan 86 ca nativ. Am vrut  o interfata netagata spre switch.
+        !
+        interface FastEthernet0/24
+        switchport trunk encapsulation dot1q
+        switchport trunk native vlan 86
+        switchport trunk allowed vlan 25,34
+        switchport mode trunk
+        !&lt;/p&gt;
+&lt;p&gt;Profiul &lt;code&gt;netctl&lt;/code&gt; pentru interfata spre swtich. Foarte important e &lt;code&gt;SkipNoCarrier&lt;/code&gt; care nu va ridica o interfata
+care nu are link si ulterior, va avea unul.&lt;/p&gt;
+&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;    cat /etc/netctl/enp4s2
+    Description=&amp;#39;enp4s2-access 86&amp;#39;
+    Interface=enp4s2
+    Connection=ethernet
+    SkipNoCarrier=yes
+    IP=static
+    AutoWired=yes
+    Address=(&amp;#39;10.86.0.2/29&amp;#39;)
+    IPCustom=(&amp;#39;route add 10.25.0.0/29 via 10.86.0.1&amp;#39; &amp;#39;route add 10.34.0.0/29 via 10.86.0.1&amp;#39;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;ifconfig&lt;/code&gt; va arata interfata dupa &lt;code&gt;netctl start&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Pe interfata de pe raspberry. Traficul pleaca la fel. Untagged.&lt;/p&gt;
+&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;    [root@pytest netctl]# cat eth0
+    Description=&amp;#39;eth0&amp;#39;
+    Interface=eth0
+    Connection=ethernet
+    AutoWired=yes
+    SkipNoCarrier=yes
+    IP=static
+    Address=(&amp;#39;10.25.0.2/29&amp;#39;)
+    Gateway=(&amp;#39;10.25.0.1&amp;#39;)
+    DNS=(&amp;#39;8.8.8.8 8.8.4.4&amp;#39;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Si pe swtich&lt;/p&gt;
+&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;    !
+    interface Vlan25
+    description Raspberry
+    ip address 10.25.0.1 255.255.255.248
+    !
+    !
+    interface FastEthernet0/12
+    switchport access vlan 25
+    switchport mode access
+    !
+    Cu o ruta statica spre sistemul cu netul
+    !
+    interface Vlan30
+    description Calculator
+    ip address 10.86.0.1 255.255.255.248
+    !
+    ip route 0.0.0.0 0.0.0.0 10.86.0.2
 &lt;/pre&gt;&lt;/div&gt;</content>
+  </entry>
+  <entry xml:base="http://ovidiucs.github.io/feed.atom">
+    <title type="text">Python Classes: A short intro on classes in Python with code snippets and notes taken from the python docs</title>
+    <id>http://ovidiucs.github.io/blog/hello/</id>
+    <updated>2015-06-14T00:00:00Z</updated>
+    <published>2015-06-14T00:00:00Z</published>
+    <link href="http://ovidiucs.github.io/blog/hello/" />
+    <author>
+      <name>ovidiucs</name>
+    </author>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Class: a blue print for an instance&lt;/li&gt;
+&lt;li&gt;Instance: a constructed object of the class&lt;/li&gt;
+&lt;li&gt;Type: indicates the class the instance belongs to&lt;/li&gt;
+&lt;li&gt;Attribute: any object value : object.attribute&lt;/li&gt;
+&lt;li&gt;Method: a &quot;callable attribute&quot; defined in the class&lt;/li&gt;
+&lt;li&gt;Static method&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script src=&quot;https://gist.github.com/ovidiucs/03d4021c94abb0d05b30.js&quot;&gt;&lt;/script&gt;</content>
   </entry>
 </feed>
